@@ -1,6 +1,6 @@
-#define RED 9
+#define RED 11
 #define BLUE 10
-#define GREEN 11
+#define GREEN 9
 
 void setup() {
   pinMode(RED, OUTPUT);  // Set RED pin 9 as output
@@ -14,3 +14,4 @@ void loop() {
  digitalWrite(RED, LOW);   // Turn LED off
  delay(1000);              // Wait 1 second
 }
+
