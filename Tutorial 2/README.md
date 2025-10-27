@@ -57,34 +57,20 @@ void loop(){
 Your Challenge
 
 Option 1: Cycle colors on each press
-
 OR
-
 Option 2: Hold button for color sequence
 
 Open Tutorial-2-Challenge.ino
 
 Troubleshooting
-
-
-
-Button not responding? Check connections to Pin 2 and GND
-
-Erratic behavior? Add debouncing (50ms delay between reads)
-
-Wrong colors? Verify RGB LED is common cathode type
-
-
+* Button not responding? Check connections to Pin 2 and GND
+* Erratic behavior? Add debouncing (50ms delay between reads)
+* Wrong colors? Verify RGB LED is common cathode type
 
 Advanced Ideas
+* Long press (2+ sec) for different patterns
+* PWM with analogWrite() for fading effects
 
-
-
-Debouncing for cleaner button detection
-
-Long press (2+ sec) for different patterns
-
-PWM with analogWrite() for fading effects
 
 
 
