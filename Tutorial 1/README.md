@@ -22,7 +22,7 @@ Code Explanation
 
 #define BLUE 10
 
-#define GRREEN 11
+#define GREEN 11
 
 void setup() {
 
@@ -62,6 +62,7 @@ Troubleshooting
 * LED dim? Verify 330Ω resistor
 
 * Upload fails? Check Tools → Board → Arduino Uno
+
 
 
 
