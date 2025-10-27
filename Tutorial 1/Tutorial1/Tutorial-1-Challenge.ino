@@ -37,6 +37,6 @@ void color(int a, int b, int c, int timerange){
   
   delay(randomDelay);
   
-  digitalWrite(9, a); digitalWrite(10, b); digitalWrite(11, c);
+  digitalWrite(RED, a); digitalWrite(GREEN, b); digitalWrite(BLUE, c);
   
 } 
