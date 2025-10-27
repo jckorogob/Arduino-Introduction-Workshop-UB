@@ -14,23 +14,23 @@ Components
 Circuit (see Circuit1.png)
 
   * LED cathode (Long Leg) → GND
-  * R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 9, G = pin 10, B = pin 11
+  * R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 11, G = pin 10, B = pin 9
 
 Code Explanation
 
-#define RED 9
+#define RED 11
 
 #define BLUE 10
 
-#define GREEN 11
+#define GREEN 9
 
 void setup() {
 
-  pinMode(RED, OUTPUT);  // Set RED pin 9 as output
+  pinMode(RED, OUTPUT);  // Set RED pin 11 as output
   
   pinMode(GREEN, OUTPUT);  // Set GREEN pin 10 as output
   
-  pinMode(BLUE, OUTPUT);  // Set BLUE pin 11 as output
+  pinMode(BLUE, OUTPUT);  // Set BLUE pin 9 as output
   
 }
 
@@ -62,6 +62,7 @@ Troubleshooting
 * LED dim? Verify 330Ω resistor
 
 * Upload fails? Check Tools → Board → Arduino Uno
+
 
 
 
