@@ -1,74 +1,68 @@
-Tutorial 1: LED Blinking
+Tutorial 1: Blinking LED
 
-Overview
-
-Learn to control an LED with Arduino. The provided code makes the LED blink once per second. Your task: make it flash 5 random colors at random intervals (1-10 seconds).
+Overview:
+*Learn to control an LED with Arduino. The provided code makes the LED blink once per second. Your task: make it flash 5 random colors at random intervals (1-10 seconds).
 
 Components
-
-
-
-Arduino Uno
-
-Breadboard
-
-LED (RGB LED recommended)
-
-220Ω resistor
-
-Jumper wires
-
-USB cable
-
-
+*Arduino Uno
+*Breadboard
+*RGB LED
+*330Ω resistor
+*Jumper wires
+*USB cable
 
 Circuit (see Circuit1.png)
 
-
-
-LED anode (long leg) → 220Ω resistor → Pin 13
-
-LED cathode (short leg) → GND
-
-
+*LED cathode (Long Leg) → GND
+*R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 9, G = pin 10, B = pin 11
 
 Code Explanation
 
+#define RED 9
+
+#define BLUE 10
+
+#define GRREEN 11
+
 void setup() {
 
-  pinMode(11, OUTPUT);  // Set pin 13 as output
-
+  pinMode(RED, OUTPUT);  // Set RED pin 9 as output
+  
+  pinMode(GREEN, OUTPUT);  // Set GREEN pin 10 as output
+  
+  pinMode(BLUE, OUTPUT);  // Set BLUE pin 11 as output
+  
 }
 
 
 
 void loop() {
 
- digitalWrite(11, HIGH);  // Turn LED on
+ digitalWrite(RED, HIGH);  // Turn LED on RED
 
- delay(1000);             // Wait 1 second
+ delay(1000);              // Wait 1 second
 
- digitalWrite(11, LOW);   // Turn LED off
+ digitalWrite(RED, LOW);   // Turn LED off
 
- delay(1000);             // Wait 1 second
+ delay(1000);              // Wait 1 second
 
 }
 
+
 Your Challenge
 
-For random timing:
+  For random timing:
 
-Open the Tutorial-1-Challenge.ino file
+  * Open the Tutorial-1-Challenge.ino file
 
 Troubleshooting
 
+*LED not lighting? Check polarity (long leg = -)
 
+*LED dim? Verify 330Ω resistor
 
-LED not lighting? Check polarity (long leg = +)
+*Upload fails? Check Tools → Board → Arduino Uno
 
-LED dim? Verify 220Ω resistor
-
-Upload fails? Check Tools → Board → Arduino Uno
 
 
 
