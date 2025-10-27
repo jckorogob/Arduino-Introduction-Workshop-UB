@@ -30,43 +30,29 @@ Button:
 
 Code Explanation
 
-const int BUTTON_PIN = 2;
+#define RED 11
+#define BLUE 10
+#define GREEN 9
+#define BTN 2
 
-const int LED\_PIN = 13;
-
-int buttonState = 0;
-
-
+int buttonState;
 
 void setup() {
-
-&nbsp; pinMode(LED\_PIN, OUTPUT);
-
-&nbsp; pinMode(BUTTON\_PIN, INPUT\_PULLUP);  // Built-in pull-up resistor
-
+  pinMode(RED, OUTPUT);        // Set RED pin 11 as output
+  pinMode(GREEN, OUTPUT);      // Set GREEN pin 10 as output
+  pinMode(BLUE, OUTPUT);       // Set BLUE pin 9 as output
+  pinMode(BTN, INPUT_PULLUP);  // Built-in pull-up resistor
 }
 
+void loop(){
+  buttonState = digitalRead(BTN);
 
-
-void loop() {
-
-&nbsp; buttonState = digitalRead(BUTTON\_PIN);
-
-&nbsp; 
-
-&nbsp; if(buttonState == LOW) {       // Button pressed (connected to GND)
-
-&nbsp;   digitalWrite(LED\_PIN, HIGH);
-
-&nbsp; } else {
-
-&nbsp;   digitalWrite(LED\_PIN, LOW);
-
-&nbsp; }
-
+  if(buttonState == LOW) {
+    digitalWrite(RED, HIGH); 
+  } else {
+    digitalWrite(RED,LOW); 
+  }
 }
-
-INPUT\_PULLUP: Pin reads HIGH when button not pressed, LOW when pressed (no external resistor needed).
 
 Your Challenge
 
@@ -99,6 +85,7 @@ Debouncing for cleaner button detection
 Long press (2+ sec) for different patterns
 
 PWM with analogWrite() for fading effects
+
 
 
 
