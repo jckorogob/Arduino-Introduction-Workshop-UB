@@ -20,23 +20,17 @@ Circuit (see Circuit2.png)
 
 LED:
 
-LED cathode → GND
-LED Cathode → 330Ω resistor → Pin 13
-
+* LED cathode (Long Leg) → GND
+* R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 11, G = pin 10, B = pin 9
 
 Button:
 
-
-
-Button pin 1 → Pin 2
-
-Button pin 2 (diagonal) → GND
-
-
+* Button (Bottom Right Leg) → GND
+* Button (Bottom Left Leg) → Pin 2
 
 Code Explanation
 
-cppconst int BUTTON\_PIN = 2;
+const int BUTTON_PIN = 2;
 
 const int LED\_PIN = 13;
 
@@ -105,6 +99,7 @@ Debouncing for cleaner button detection
 Long press (2+ sec) for different patterns
 
 PWM with analogWrite() for fading effects
+
 
 
 
