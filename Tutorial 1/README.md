@@ -1,20 +1,20 @@
 Tutorial 1: Blinking LED
 
 Overview:
-*Learn to control an LED with Arduino. The provided code makes the LED blink once per second. Your task: make it flash 5 random colors at random intervals (1-10 seconds).
+  *Learn to control an LED with Arduino. The provided code makes the LED blink once per second. Your task: make it flash 5 random colors at random intervals (1-10 seconds).
 
 Components
-*Arduino Uno
-*Breadboard
-*RGB LED
-*330Ω resistor
-*Jumper wires
-*USB cable
+  *Arduino Uno
+  *Breadboard
+  *RGB LED
+  *330Ω resistor
+  *Jumper wires
+  *USB cable
 
 Circuit (see Circuit1.png)
 
-*LED cathode (Long Leg) → GND
-*R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 9, G = pin 10, B = pin 11
+  *LED cathode (Long Leg) → GND
+  *R G B Legs (Shorter Legs) → 330Ω Resistor → R = pin 9, G = pin 10, B = pin 11
 
 Code Explanation
 
@@ -62,6 +62,7 @@ Troubleshooting
 *LED dim? Verify 330Ω resistor
 
 *Upload fails? Check Tools → Board → Arduino Uno
+
 
 
 
