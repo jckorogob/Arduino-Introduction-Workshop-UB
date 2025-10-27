@@ -1,64 +1,39 @@
-\# Tutorial 4: LCD Display and Button Input
+# Tutorial 4: LCD Display and Button Input
+
+## What You'll Learn
+
+* In this tutorial, you'll learn how to use a 16x2 LCD display to show text and read button inputs. This combines visual output with user interaction - essential for any Arduino project interface.
 
 
 
-\## What You'll Learn
+Components Needed
+* Arduino Uno
+* 16x2 LCD Display (with parallel interface)
+* 2x Push buttons
+* 10kΩ Potentiometer (for LCD contrast)
+* Breadboard
+* Jumper wires
 
-In this tutorial, you'll learn how to use a \*\*16x2 LCD display\*\* to show text and read button inputs. This combines visual output with user interaction - essential for any Arduino project interface.
+Circuit Overview
 
+LCD Connections (Standard Parallel Mode)
 
+* VSS → GND
+* VDD → 5V
+* V0 → Potentiometer middle pin (contrast control)
+* RS → Arduino Pin 12
+* RW → GND
+* E → Arduino Pin 11
+* D4 → Arduino Pin 5
+* D5 → Arduino Pin 4
+* D6 → Arduino Pin 3
+* D7 → Arduino Pin 2
+* A (Backlight +) → 5V
+* K (Backlight -) → GND
 
-\## Components Needed
+Button Connections
 
-\- Arduino Uno
-
-\- 16x2 LCD Display (with parallel interface)
-
-\- 2x Push buttons
-
-\- 10kΩ Potentiometer (for LCD contrast)
-
-\- Breadboard
-
-\- Jumper wires
-
-
-
-\## Circuit Overview
-
-
-
-\### LCD Connections (Standard Parallel Mode)
-
-\- \*\*VSS\*\* → GND
-
-\- \*\*VDD\*\* → 5V
-
-\- \*\*V0\*\* → Potentiometer middle pin (contrast control)
-
-\- \*\*RS\*\* → Arduino Pin 12
-
-\- \*\*RW\*\* → GND
-
-\- \*\*E\*\* → Arduino Pin 11
-
-\- \*\*D4\*\* → Arduino Pin 5
-
-\- \*\*D5\*\* → Arduino Pin 4
-
-\- \*\*D6\*\* → Arduino Pin 3
-
-\- \*\*D7\*\* → Arduino Pin 2
-
-\- \*\*A (Backlight +)\*\* → 5V
-
-\- \*\*K (Backlight -)\*\* → GND
-
-
-
-\### Button Connections
-
-\- \*\*Button 1 (LEFT)\*\* → Pin 6 to GND
+Button 1 (LEFT) → Pin 6 to GND
 
 \- \*\*Button 2 (RIGHT)\*\* → Pin 7 to GND
 
@@ -183,4 +158,5 @@ This code helps you test your button connections:
 \## Why This Matters
 
 LCD displays are one of the most common ways to show information from your Arduino. Combined with buttons for input, you can create complete user interfaces for standalone projects without needing a computer connection!
+
 
