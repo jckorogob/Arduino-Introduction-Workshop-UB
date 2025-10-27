@@ -33,130 +33,112 @@ LCD Connections (Standard Parallel Mode)
 
 Button Connections
 
-Button 1 (LEFT) → Pin 6 to GND
-
-\- \*\*Button 2 (RIGHT)\*\* → Pin 7 to GND
-
+* Button (Bottom Right Leg) → GND
+* Button (Bottom Left Leg) → Pin 2
 
 
-\## Part 1: Basic LCD Display (Tutorial4-1.ino)
+
+Part 1: Basic LCD Display (Tutorial4-1.ino)
 
 This code demonstrates basic LCD text display:
 
-\- Displays text on both rows of the LCD
+Displays text on both rows of the LCD
+Shows text for 4 seconds, then clears
+Waits 5 seconds and repeats
 
-\- Shows text for 4 seconds, then clears
+Key Functions:
 
-\- Waits 5 seconds and repeats
+lcd.begin(16, 2);        //Initialize 16 columns, 2 rows
 
+lcd.setCursor(col, row); //Set cursor position
 
+lcd.print("text");       //Display text
 
-\*\*Key Functions:\*\*
-
-\- `lcd.begin(16, 2)` - Initialize 16 columns, 2 rows
-
-\- `lcd.setCursor(col, row)` - Set cursor position
-
-\- `lcd.print("text")` - Display text
-
-\- `lcd.clear()` - Clear the entire display
+lcd.clear()              //Clear the entire display
 
 
 
-\## Part 2: Button Input Testing (Tutorial4-2.ino)
+Part 2: Button Input Testing (Tutorial4-2.ino)
 
 This code helps you test your button connections:
+* Displays "Button Test" on the screen
+* Shows counters for left (L:) and right (R:) button presses
+* Uses internal pull-up resistors (no external resistors needed!)
+* Includes debouncing to prevent false triggers
 
-\- Displays "Button Test" on the screen
+Key Concepts:
 
-\- Shows counters for left (L:) and right (R:) button presses
+* INPUT_PULLUP - Activates internal pull-up resistors
+* Button reads LOW when pressed (with pull-up)
+* Debouncing - Preventing multiple reads from one press
 
-\- Uses internal pull-up resistors (no external resistors needed!)
+Your Challenges
 
-\- Includes debouncing to prevent false triggers
+Easy:
 
+1. Change the text that displays on the LCD
 
+2. Make the LCD display your name and a custom message
 
-\*\*Key Concepts:\*\*
+3. Make the text blink on and off at different intervals
 
-\- `INPUT\_PULLUP` - Activates internal pull-up resistors
-
-\- Button reads LOW when pressed (with pull-up)
-
-\- Debouncing - Preventing multiple reads from one press
-
-
-
-\## Your Challenges
-
-
-
-\### Easy:
-
-1\. Change the text that displays on the LCD
-
-2\. Make the LCD display your name and a custom message
-
-3\. Make the text blink on and off at different intervals
-
-4\. Display the current button count on the LCD
+4. Display the current button count on the LCD
 
 
 
-\### Medium:
+Medium:
 
-5\. Create a simple menu system that changes when you press buttons
+1. Create a simple menu system that changes when you press buttons
 
-6\. Make a counter that increments with one button and decrements with the other
+2. Make a counter that increments with one button and decrements with the other
 
-7\. Display a scrolling message that moves across the screen
+3. Display a scrolling message that moves across the screen
 
-8\. Create a reaction time game - display "GO!" and measure how fast you press the button
-
-
-
-\### Advanced:
-
-9\. Create a simple calculator that lets you select numbers and operations with buttons
-
-10\. Build a two-player game where each player has a button and score is displayed
-
-11\. Make a password system where you must press buttons in a specific sequence
-
-12\. \*\*Challenge:\*\* Combine Tutorial 3 and 4 - display the servo angle on the LCD!
+4. Create a reaction time game - display "GO!" and measure how fast you press the button
 
 
+Advanced:
 
-\## Key Concepts
+1. Create a simple calculator that lets you select numbers and operations with buttons
 
-\- \*\*LCD Display\*\*: Visual output for projects
+2. Build a two-player game where each player has a button and score is displayed
 
-\- \*\*Cursor Positioning\*\*: Controlling where text appears
+3. Make a password system where you must press buttons in a specific sequence
 
-\- \*\*Button Input\*\*: Reading user interaction
-
-\- \*\*Pull-up Resistors\*\*: Internal resistors that make button reading easier
-
-\- \*\*Debouncing\*\*: Cleaning up noisy button signals
-
-\- \*\*String Formatting\*\*: Combining text and numbers for display
+4. *Challenge: Combine Tutorial 3 and 4 - display the servo angle on the LCD!
 
 
 
-\## Troubleshooting
+Key Concepts
 
-\- \*\*Can't see text?\*\* Adjust the potentiometer to change contrast
+* LCD Display: Visual output for projects
 
-\- \*\*Buttons not working?\*\* Check that you're using `INPUT\_PULLUP` mode
+* Cursor Positioning: Controlling where text appears
 
-\- \*\*Garbled characters?\*\* Check all LCD data pin connections (D4-D7)
+* Button Input: Reading user interaction
 
-\- \*\*No backlight?\*\* Verify A and K pins are connected to 5V and GND
+* Pull-up Resistors: Internal resistors that make button reading easier
+
+* Debouncing: Cleaning up noisy button signals
+
+* String Formatting: Combining text and numbers for display
 
 
 
-\## Why This Matters
+Troubleshooting
 
-LCD displays are one of the most common ways to show information from your Arduino. Combined with buttons for input, you can create complete user interfaces for standalone projects without needing a computer connection!
+* Can't see text? Adjust the potentiometer to change contrast
+
+* Buttons not working? Check that you're using INPUT_PULLUP mode
+
+* Garbled characters? Check all LCD data pin connections (D4-D7)
+
+* No backlight? Verify A and K pins are connected to 5V and GND
+
+
+Why This Matters
+
+* LCD displays are one of the most common ways to show information from your Arduino. Combined with buttons for input, you can create complete user interfaces for standalone projects without needing a computer connection!
+
 
 
