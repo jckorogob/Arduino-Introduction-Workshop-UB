@@ -90,63 +90,11 @@ Your Challenge
 
 Option 1: Cycle colors on each press
 
-cppint colorMode = 0;
-
-int lastButtonState = HIGH;
-
-
-
-// In loop():
-
-if(buttonState == LOW \&\& lastButtonState == HIGH) {
-
-&nbsp; colorMode++;
-
-&nbsp; if(colorMode > 4) colorMode = 0;
-
-}
-
-lastButtonState = buttonState;
+OR
 
 Option 2: Hold button for color sequence
 
-cppif(buttonState == LOW) {
-
-&nbsp; showRed(); delay(500);
-
-&nbsp; showGreen(); delay(500);
-
-&nbsp; // etc...
-
-}
-
-RGB LED Setup:
-
-Connect R, G, B to pins 9, 10, 11 (each with 220Ω resistor):
-
-cppvoid showRed() {
-
-&nbsp; digitalWrite(9, HIGH);
-
-&nbsp; digitalWrite(10, LOW);
-
-&nbsp; digitalWrite(11, LOW);
-
-}
-
-
-
-void showGreen() {
-
-&nbsp; digitalWrite(9, LOW);
-
-&nbsp; digitalWrite(10, HIGH);
-
-&nbsp; digitalWrite(11, LOW);
-
-}
-
-// Create functions for Blue, Yellow, Purple...
+Open Tutorial-2-Challenge.ino
 
 Troubleshooting
 
@@ -169,4 +117,5 @@ Debouncing for cleaner button detection
 Long press (2+ sec) for different patterns
 
 PWM with analogWrite() for fading effects
+
 
