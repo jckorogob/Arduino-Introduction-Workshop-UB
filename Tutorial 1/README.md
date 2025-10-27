@@ -71,7 +71,7 @@ void setup() {
 void loop() {
   for(int i = 0; i < 20; i++){
     //Enter 4 numbers into this function call the first 3 should be 1's or 0's the last on should be a maximum random time in seconds
-    color(1,0,0,10)
+    color(1,0,0,10);
   }
 }
 
@@ -98,5 +98,6 @@ LED not lighting? Check polarity (long leg = +)
 LED dim? Verify 220Ω resistor
 
 Upload fails? Check Tools → Board → Arduino Uno
+
 
 
