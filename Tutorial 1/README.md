@@ -34,9 +34,9 @@ LED cathode (short leg) → GND
 
 Code Explanation
 
-cppvoid setup() {
+void setup() {
 
-&nbsp; pinMode(13, OUTPUT);  // Set pin 13 as output
+  pinMode(11, OUTPUT);  // Set pin 13 as output
 
 }
 
@@ -44,13 +44,13 @@ cppvoid setup() {
 
 void loop() {
 
-&nbsp; digitalWrite(13, HIGH);  // Turn LED on
+ digitalWrite(11, HIGH);  // Turn LED on
 
-&nbsp; delay(1000);             // Wait 1 second
+ delay(1000);             // Wait 1 second
 
-&nbsp; digitalWrite(13, LOW);   // Turn LED off
+ digitalWrite(11, LOW);   // Turn LED off
 
-&nbsp; delay(1000);             // Wait 1 second
+ delay(1000);             // Wait 1 second
 
 }
 
@@ -58,53 +58,36 @@ Your Challenge
 
 For random timing:
 
-cpp// In setup():
+Copy Paste this code block 
 
-randomSeed(analogRead(0));
+//-----------------------------------------------------------------------------
 
+void setup() {
+ pinMode(11, OUTPUT);
+ pinMode(10, OUTPUT);
+ pinMode(9, OUTPUT);
+}
+ 
+void loop() {
+  for(int i = 0; i < 20; i++){
+    //Enter 4 numbers into this function call the first 3 should be 1's or 0's the last on should be a maximum random time in seconds
+    color(1,0,0,10)
+  }
+}
 
-
-// In loop():
-
-int randomDelay = random(1000, 10001);  // 1-10 seconds
-
-delay(randomDelay);
-
-For RGB LED colors:
-
-Connect Red, Green, Blue to pins 9, 10, 11 (each with 220Ω resistor):
-
-cpp// Red
-
-digitalWrite(9, HIGH); digitalWrite(10, LOW); digitalWrite(11, LOW);
-
-
-
-// Green  
-
-digitalWrite(9, LOW); digitalWrite(10, HIGH); digitalWrite(11, LOW);
-
-
-
-// Blue
-
-digitalWrite(9, LOW); digitalWrite(10, LOW); digitalWrite(11, HIGH);
+/*
+* Color Function
+* This takes in 3 HI LO inputs and outputs colors according to the signals sent
+* Timerange is a time range in seconds
+*/
+void color(int a, int b, int c, int timerange){
+  int randomDelay = random(1000, timerange*100); 
+  delay(randomDelay);
+  digitalWrite(9, a); digitalWrite(10, b); digitalWrite(11, c);
+} 
 
 
-
-// Yellow
-
-digitalWrite(9, HIGH); digitalWrite(10, HIGH); digitalWrite(11, LOW);
-
-
-
-// Purple
-
-digitalWrite(9, HIGH); digitalWrite(10, LOW); digitalWrite(11, HIGH);
-
-Pick random colors:
-
-cppint colorChoice = random(0, 5);  // 0-4 for 5 colors
+//--------------------------------------------------------------------------------
 
 Troubleshooting
 
@@ -115,4 +98,5 @@ LED not lighting? Check polarity (long leg = +)
 LED dim? Verify 220Ω resistor
 
 Upload fails? Check Tools → Board → Arduino Uno
+
 
