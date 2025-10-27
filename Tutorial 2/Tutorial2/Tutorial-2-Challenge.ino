@@ -1,34 +1,46 @@
-int colorMode = 0;
-int lastButtonState = HIGH;
+#define RED 11
+#define BLUE 10
+#define GREEN 9
+#define BTN 2
 
-void setup(){
-  pinMode(9, OUTPUT);
-  pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(2, INPUT_PULLUP);  // Built-in pull-up resistor
+int buttonState;
+
+void setup() {
+  pinMode(RED, OUTPUT);        // Set RED pin 11 as output
+  pinMode(GREEN, OUTPUT);      // Set GREEN pin 10 as output
+  pinMode(BLUE, OUTPUT);       // Set BLUE pin 9 as output
+  pinMode(BTN, INPUT_PULLUP);  // Built-in pull-up resistor
 }
 
 void loop(){
-  int buttonState = digitalRead(2);
+  buttonState = digitalRead(2);
 
   if(buttonState == LOW) {
-    showRed(); delay(500);
-    showGreen(); delay(500);
+    showRed();
+    showGreen();
   } else {
-    digitalWrite(9, LOW);
-    digitalWrite(10, LOW);
-    digitalWrite(11, LOW);
+    //Turns LED off
+    clear();
   }
+}
+//copy the format of these functions to create new functions (Change the signals from HIGH to LOW and test them out)
+void clear(){
+  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, LOW);
+  delay(500);
 }
 
 void showRed() {
-  digitalWrite(9, HIGH);
-  digitalWrite(10, LOW);
-  digitalWrite(11, LOW);
+  digitalWrite(RED, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, LOW);
+  delay(500);
 }
 
 void showGreen() {
-  digitalWrite(9, LOW);
-  digitalWrite(10, HIGH);
-  digitalWrite(11, LOW);
+  digitalWrite(RED, LOW);
+  digitalWrite(GREEN, HIGH);
+  digitalWrite(BLUE, LOW);
+  delay(500);
 }
