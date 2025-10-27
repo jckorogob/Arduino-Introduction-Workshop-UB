@@ -1,0 +1,1 @@
+This is the first Project for the workshop. For this Tutorial you will learn to wire an and control an LED using core principles of Arduino. The code given to you will make the LED flash one color, your task will be to make it flash multiple colors at random time intervals between 1 and 10 second.
