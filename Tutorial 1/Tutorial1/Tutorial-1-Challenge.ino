@@ -1,22 +1,26 @@
-void setup() {
+#define RED 9
+#define BLUE 10
+#define GREEN 11
 
- pinMode(11, OUTPUT);
- 
- pinMode(10, OUTPUT);
- 
- pinMode(9, OUTPUT);
- 
+void setup() {
+  pinMode(RED, OUTPUT);  // Set RED pin 9 as output
+  pinMode(GREEN, OUTPUT);  // Set GREEN pin 10 as output
+  pinMode(BLUE, OUTPUT);  // Set BLUE pin 11 as output
 }
  
 void loop() {
-
+ //This loop repeats the sequence of colors you create 20 times
   for(int i = 0; i < 20; i++){
-  
     //Enter 4 numbers into this function call the first 3 should be 1's or 0's the last on should be a maximum random time in seconds
-    color(1,0,0,10);
+    //Example: color(LOW, HIGH, LOW, 5)
+    //that will make the LED flash blue at random time intervals between 1 and 5 secnds
+    color(HIGH,LOW,LOW,10);
+    //Add more color function calls below to create a variety of flashing colors with different time increments
+    //   |
+    //   |
+    //  \/ Add Here
     
-  }
-  
+  } 
 }
 
 /*
