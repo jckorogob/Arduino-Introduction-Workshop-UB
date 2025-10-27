@@ -1,26 +1,18 @@
 Tutorial 2: Button-Controlled LED
 
-Overview
+Overview:
+* Add a button to control your LED. The provided code turns the LED on when pressed, off when released.
 
-Add a button to control your LED. The provided code turns the LED on when pressed, off when released. Your task: make the LED flash different colors when the button is pressed.
+Your task: make the LED flash different colors when the button is pressed.
 
 Components
-
-
-
-Arduino Uno
-
-Breadboard
-
-LED (RGB LED recommended)
-
-Push button
-
-220Ω resistor
-
-Jumper wires
-
-USB cable
+* Arduino Uno
+* Breadboard
+* LED (RGB LED recommended)
+* Push button
+* 220Ω resistor
+* Jumper wires
+* USB cable
 
 
 
@@ -28,12 +20,8 @@ Circuit (see Circuit2.png)
 
 LED:
 
-
-
-LED anode → 220Ω resistor → Pin 13
-
 LED cathode → GND
-
+LED Cathode → 330Ω resistor → Pin 13
 
 
 Button:
@@ -117,5 +105,6 @@ Debouncing for cleaner button detection
 Long press (2+ sec) for different patterns
 
 PWM with analogWrite() for fading effects
+
 
 
